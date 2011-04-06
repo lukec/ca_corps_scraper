@@ -2,8 +2,12 @@ This repository contains code to scrape Industry Canada's Federal Corporation se
 
 https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpSrch.html
 
-Process: We POST a search of the Corporation Number, starting at 0000001 and moving upwards. We scrape the results into a CSV file.
+Results are scraped by searching by Corporation Number as a 6 digit integer. The search string is prefix matched to the Corporation Number, resulting in up to 10 results in an HTML table. This table is scraped into a CSV file.
 
-Bugs:
-* I think non-ascii characters are not transferred correctly
+Requires: Scrappy Perl scraping library
+
+Installing Dependencies: The easiest way is to install cpanm ("CPAN minus" - a great little Perl package manager) and then use it to install Scrappy:
+
+  As root: curl -L http://cpanmin.us | perl - --self-upgrade
+  Then: cpanm --sudo Scrappy
 
