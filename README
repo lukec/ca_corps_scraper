@@ -1,0 +1,9 @@
+This repository contains code to scrape Industry Canada's Federal Corporation search tool.
+
+https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpSrch.html
+
+Process: We POST a search of the Corporation Number, starting at 0000001 and moving upwards. We scrape the results into a CSV file.
+
+Bugs:
+* I think non-ascii characters are not transferred correctly
+
